@@ -2,6 +2,9 @@
 
 Simulation experiments on friction, compliance, and material memory. The project includes separate and joint prediction models, analytical references, controlled state-estimation experiments, and evaluation tools.
 
+
+[Tool guide](docs/TOOLS.md): commands, inputs, outputs, and operating sequence.
+
 ## Initialize
 
 The core tests run on CPU with Python 3.11; Isaac Sim is not required for this first check.

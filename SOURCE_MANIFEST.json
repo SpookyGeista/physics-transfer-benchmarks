@@ -11,7 +11,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "4b5cac22e3e262fdc0e5e472203a8641da1c1308776721f55aac6eb41a575d2d"
+      "sha256": "bc1b4c892127ee49f6a9f00083ae62bdf80187bdfc0656f979c2ebe8da71c91f"
     },
     {
       "path": "configs/experiment.json",
@@ -20,6 +20,10 @@
     {
       "path": "configs/requirements-observed.txt",
       "sha256": "2793b4c9cdcefd49e92f99190a5de1c2a3788b7821986d07e9c47aa03149b17e"
+    },
+    {
+      "path": "docs/TOOLS.md",
+      "sha256": "7ca5269cb4bfb96e18aecbfa612bffdab9c510fbaeaaeeb6167ac6b2a162461c"
     },
     {
       "path": "evidence/information_and_physical_spread.png",
