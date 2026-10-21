@@ -1,0 +1,133 @@
+{
+  "role": "Locally locked held-out replication of scalar-memory initialization; no neural superiority or novel algorithm claim",
+  "version": "native-preparation-v2-2026-09-15",
+  "dt": 0.0025,
+  "observation_steps": 10,
+  "mass_kg": 2.0,
+  "initial_compression_m": 0.02,
+  "future_seconds": 0.25,
+  "future_compression_amplitude_m": 0.002,
+  "future_excitation_N": 5.0,
+  "preparation_seeds": [
+    51201,
+    51202,
+    51203,
+    51204,
+    51205,
+    51206,
+    51207,
+    51208
+  ],
+  "preparation_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "split": "test",
+  "episodes_per_batch": 48,
+  "excitation_signs": [
+    -1,
+    1
+  ],
+  "model_seed": 1,
+  "model_calibration_noise": "noisy",
+  "compositions": [
+    [
+      "maxwell",
+      "maxwell"
+    ],
+    [
+      "maxwell",
+      "boucwen"
+    ],
+    [
+      "boucwen",
+      "maxwell"
+    ],
+    [
+      "boucwen",
+      "boucwen"
+    ]
+  ],
+  "cam_amplitudes_m": [
+    -0.006,
+    -0.002,
+    0.002,
+    0.006
+  ],
+  "sensor_conditions": {
+    "noisy": {
+      "sigma_x_m": 5e-05,
+      "sigma_v_m_s": 0.002,
+      "sigma_normal_N": 0.15
+    }
+  },
+  "sensor_noise_seed": 6152026,
+  "probe_controller": {
+    "kp_N_m": 120.0,
+    "kd_N_s_m": 20.0,
+    "max_force_N": 12.0
+  },
+  "probes": [
+    {
+      "name": "none",
+      "duration_s": 0.0,
+      "excitation_N": 0.0
+    },
+    {
+      "name": "hold_050",
+      "duration_s": 0.05,
+      "excitation_N": 0.0
+    },
+    {
+      "name": "hold_150",
+      "duration_s": 0.15,
+      "excitation_N": 0.0
+    },
+    {
+      "name": "hold_300",
+      "duration_s": 0.3,
+      "excitation_N": 0.0
+    },
+    {
+      "name": "gentle_050",
+      "duration_s": 0.05,
+      "excitation_N": 3.0
+    },
+    {
+      "name": "gentle_150",
+      "duration_s": 0.15,
+      "excitation_N": 3.0
+    },
+    {
+      "name": "strong_150",
+      "duration_s": 0.15,
+      "excitation_N": 8.0
+    },
+    {
+      "name": "strong_300",
+      "duration_s": 0.3,
+      "excitation_N": 8.0
+    }
+  ],
+  "grid_points": 201,
+  "friction_prior": {
+    "maxwell": [
+      0.0,
+      1.0
+    ],
+    "boucwen": [
+      0.02,
+      8.0
+    ]
+  },
+  "guard": {
+    "max_abs_position_m": 0.5,
+    "max_abs_velocity_m_s": 5.0,
+    "min_normal_N": 0.01
+  },
+  "max_wall_seconds": 1800
+}

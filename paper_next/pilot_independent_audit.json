@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "source_and_output_hashes_passed": true,
+  "sensed_rows_independently_recomputed": 12960,
+  "all_rows_finite": 25920,
+  "complete_run_seconds": 9.139673432917334,
+  "physical_response_spread_rows": 36,
+  "scope": "Descriptive material pilot, fixed r1 clean models, no independent model retraining; no robot/controller result",
+  "run_manifest_sha256": "69f43f9de39f7862e239003b84b00f3f188a690d5eae4ebb9fdac27cdb6d2150"
+}

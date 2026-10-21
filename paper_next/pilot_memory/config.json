@@ -1,0 +1,63 @@
+{
+  "status": "exploratory_design_before_run",
+  "worlds": [
+    "maxwell",
+    "boucwen"
+  ],
+  "dt": 0.0025,
+  "delta_m": 0.02,
+  "probe_normal_N": 15.0,
+  "probe_velocity_m_s": 0.08,
+  "durations_s": [
+    0.0,
+    0.0025,
+    0.01,
+    0.025,
+    0.05,
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "future_seconds": 0.15,
+  "force_noise_sigma_N": [
+    0.05,
+    0.2
+  ],
+  "noise_replicates": 20,
+  "noise_seed": 9142026,
+  "grid_points": 601,
+  "maxwell_grid_bounds": [
+    0.0,
+    1.0
+  ],
+  "maxwell_true_values": [
+    0.05,
+    0.1625,
+    0.275,
+    0.3875,
+    0.5,
+    0.6125,
+    0.725,
+    0.8375,
+    0.95
+  ],
+  "boucwen_grid_bounds_s": [
+    0.02,
+    5.0
+  ],
+  "boucwen_truth_geometric_bounds_s": [
+    0.03,
+    3.0
+  ],
+  "truth_count": 9,
+  "compute_budget_seconds": 300,
+  "scope": "Privileged imposed-velocity/imposed-load constitutive fixture; no Isaac, robot, MPC, active probe optimization, weight adaptation or confirmatory inference",
+  "posterior": "Uniform mass on linear Maxwell mix grid, uniform mass on logarithmic BW age grid; known independent Gaussian force noise; likelihood uses only pre-update probe force samples",
+  "paired_counterfactual": "Same physical probe and same future for sensed/blinded; blinded has no force likelihood; durations use prefixes of the same noisy probe realization",
+  "probe_kinds": [
+    "rest",
+    "slip"
+  ],
+  "rest_control": "same durations and N; v=0; force likelihood state-independent, so sensed posterior must equal blinded at every duration"
+}

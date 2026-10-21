@@ -1,0 +1,15 @@
+{
+  "final_plot_hashes_passed": {
+    "/home/loya2/physics-transfer/paper_next/pilot_memory/results/summary.csv": true,
+    "/home/loya2/physics-transfer/paper_next/pilot_memory/results/physical_contraction.csv": true,
+    "/home/loya2/physics-transfer/paper_next/pilot_memory/plot_results_final.py": true,
+    "/home/loya2/physics-transfer/paper_next/pilot_memory/figures_final/memory_mechanism_slip.png": true,
+    "/home/loya2/physics-transfer/paper_next/pilot_memory/figures_final/memory_mechanism_rest.pdf": true,
+    "/home/loya2/physics-transfer/paper_next/pilot_memory/figures_final/memory_mechanism_slip.pdf": true,
+    "/home/loya2/physics-transfer/paper_next/pilot_memory/figures_final/memory_mechanism_rest.png": true
+  },
+  "visual_review": "Both final PNGs inspected by primary agent; matched axes, no visible clipping or magnified constant-value roundoff.",
+  "pilot_audit_passed": true,
+  "prior_locks_passed": true,
+  "scope": "Paper research direction and exploratory material pilot complete; new method and coupled preparation-selection study remain open."
+}

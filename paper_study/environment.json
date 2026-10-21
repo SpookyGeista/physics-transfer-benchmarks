@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-09-15T08:09:28.614640+00:00",
+  "python": "/home/loya2/miniconda3/envs/unitree_sim_env/bin/python",
+  "python_version": "3.11.15 (main, Mar 11 2026, 17:20:07) [GCC 14.3.0]",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "architecture": "x86_64",
+  "logical_cpus_visible": 24,
+  "packages": {
+    "numpy": "1.26.0",
+    "scipy": "1.15.3",
+    "pandas": "3.0.2",
+    "torch": "2.7.0+cu128",
+    "numba": "0.59.1",
+    "matplotlib": "3.10.3",
+    "isaacsim": "5.1.0.0",
+    "isaaclab": "0.54.3",
+    "Pillow": "11.3.0",
+    "imageio": "2.37.0",
+    "imageio-ffmpeg": "0.6.0",
+    "pytest": "9.0.3"
+  },
+  "repositories": {
+    "/home/loya2/IsaacLab_unitree": {
+      "head": "80094be3245aa5c8376a7464d29cb4412ea518f5"
+    },
+    "/home/loya2/unitree_rl_lab": {
+      "head": "4960b84732b0c2ec593dccbfe963fda1bcd7b1e3"
+    },
+    "/home/loya2/unitree_mujoco": {
+      "head": "1a37b051a10be723405b7ed6dc839361af036d88"
+    }
+  },
+  "native_device": "CPU PhysX; RTX 4090/Vulkan required to initialize installed headless Isaac application",
+  "robot_scope": "Simulation only; no real G1, SDK, ROS or DDS calls in this study",
+  "installation_policy": "Existing environments reused; no simulator or learning package installed",
+  "document_runtime": "/home/loya2/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3"
+}

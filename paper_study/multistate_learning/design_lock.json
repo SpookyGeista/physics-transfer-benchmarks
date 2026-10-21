@@ -1,0 +1,15 @@
+{
+  "scope": "local exploratory identification, frozen before fits",
+  "files": {
+    "paper_study/multistate_learning/config.json": "3519d2b8202217a19238fa8feb598bb03baacc75b8799b449535b24f9300f149",
+    "paper_study/multistate_learning/protocol.md": "20176486c5107fc5a89f9c254fefbe17492269ebdf17dcf631c60aae35d5122a",
+    "paper_study/multistate_learning/model.py": "795f65e17d1898ebc9f8e0cd9609ec7c473fa51fcd8d50c23e081c81ff460d15",
+    "paper_study/multistate_learning/profiles.py": "7808a28b9a5bf0f94ca340e9116d1c81dab6c8973a83edc5902cf44e82172c4a",
+    "paper_study/multistate_learning/generate.py": "bda8f76d289b321aa3fd580fff1ab0bb8f494286b065e56fd16fe9338cef6bbc",
+    "paper_study/multistate_learning/fit.py": "8a8a384ba52ff5812fe5d3b9f8d4f026c946a252061b0f02e111aadc18bb0189",
+    "paper_study/multistate_learning/summarize.py": "aa250efc2b8f04933d8240d3fe5b61103115e1a437516284a0a676373e9c8b97",
+    "paper_study/multistate_learning/lock.py": "78bd0eb6ac276d2a2761302d0e70b83cb2f09b5ba63191c5cd7cce252cfddc0a",
+    "paper_study/multistate_learning/test_learning.py": "0e242b3e78b2200bff222abfd7119ef63be51844a644c8d6e9ce4071c8f4d930",
+    "paper_study/alternatives/multistate_friction.py": "cf929d4897ba6299b59aeddafe5000f082f3cde0ae133a448a7bebbe60cbe7c6"
+  }
+}

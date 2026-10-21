@@ -1,0 +1,43 @@
+{
+  "role": "Exploratory native PI preparation pilot; no confirmatory inference",
+  "version": "costed-pi-native-v1-2026-09-15",
+  "split": "dev",
+  "preparation_seeds": [33001],
+  "preparation_seconds": 4.0,
+  "preparation_waypoint_limit_m": 0.025,
+  "profiles_per_seed": 6,
+  "dt": 0.0025,
+  "mass_kg": 2.0,
+  "initial_compression_m": 0.02,
+  "geometry_ids": [0, 1, 2],
+  "geometry_length_m": 0.012,
+  "cam_amplitude_m": 0.003,
+  "excitation_signs": [-1, 1],
+  "episodes_per_batch": 36,
+  "normal_worlds": ["maxwell", "boucwen"],
+  "friction_parameter_sets": ["balanced", "wide_scales", "compliant", "stiff_high_capacity"],
+  "observation_steps": 10,
+  "sensor_conditions": {
+    "ideal": {"sigma_x_m": 0.0, "sigma_v_m_s": 0.0, "sigma_normal_N": 0.0},
+    "noisy": {"sigma_x_m": 0.00005, "sigma_v_m_s": 0.002, "sigma_normal_N": 0.15}
+  },
+  "sensor_noise_seed": 6152026,
+  "probe_controller": {"kp_N_m": 120.0, "kd_N_s_m": 20.0, "max_force_N": 12.0},
+  "probes": [
+    {"name": "none", "duration_s": 0.0, "excitation_N": 0.0},
+    {"name": "hold_050", "duration_s": 0.05, "excitation_N": 0.0},
+    {"name": "hold_150", "duration_s": 0.15, "excitation_N": 0.0},
+    {"name": "hold_300", "duration_s": 0.3, "excitation_N": 0.0},
+    {"name": "gentle_050", "duration_s": 0.05, "excitation_N": 3.0},
+    {"name": "gentle_150", "duration_s": 0.15, "excitation_N": 3.0},
+    {"name": "strong_150", "duration_s": 0.15, "excitation_N": 8.0},
+    {"name": "strong_300", "duration_s": 0.3, "excitation_N": 8.0}
+  ],
+  "future_seconds": 0.4,
+  "future_compression_amplitude_m": 0.002,
+  "future_excitation_N": 10.0,
+  "solver_iterations": 40,
+  "max_solver_residual_N": 0.0000001,
+  "guard": {"max_abs_position_m": 0.5, "max_abs_velocity_m_s": 5.0, "min_normal_N": 0.01},
+  "max_wall_seconds": 3600
+}

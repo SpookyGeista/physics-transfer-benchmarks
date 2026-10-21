@@ -1,0 +1,16 @@
+{
+  "role": "Exploratory causal forecast comparison; fixed before inspecting forecast losses",
+  "model_seeds": [1],
+  "calibration_noise": ["clean"],
+  "grid_size": 201,
+  "prior": {
+    "maxwell": {"coordinate": "mix", "spacing": "linear", "bounds": [0.0, 1.0]},
+    "boucwen": {"coordinate": "age_seconds", "spacing": "log", "bounds": [0.02, 8.0]},
+    "weights": "equal grid mass: uniform mix and log-uniform age, a diagnostic broad prior rather than an empirical population prior"
+  },
+  "numerical_floor": {"x_m": 0.000001, "v_m_s": 0.00001, "normal_N": 0.0001},
+  "filters": ["conditional_N_hold", "joint_sensor_likelihood"],
+  "forecast_start": "all hypotheses condition on the same measured current x/v; no future sensor values",
+  "metrics": ["future_position_rmse_m", "future_velocity_rmse_m_s", "future_normal_rmse_N", "future_friction_rmse_N"],
+  "interpretation": "Paired additional trajectory-likelihood assimilation under common feedback and boundary sensor information. No calibrated-confidence or confirmatory significance claim."
+}

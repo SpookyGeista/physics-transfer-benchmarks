@@ -1,0 +1,15 @@
+{
+  "role": "Exploratory protocol-population prior, no native episode labels used",
+  "protocol_seed": 32001,
+  "protocol_samples": 1200,
+  "dt": 0.0025,
+  "grid_size": 201,
+  "broad_prior_fraction": 0.05,
+  "model_seeds": [1],
+  "calibration_noise": ["clean", "noisy"],
+  "compositions": [["maxwell", "maxwell"], ["maxwell", "boucwen"], ["boucwen", "maxwell"], ["boucwen", "boucwen"]],
+  "prior": {
+    "maxwell": {"spacing": "linear", "bounds": [0.0, 1.0]},
+    "boucwen": {"spacing": "log", "bounds": [0.02, 8.0]}
+  }
+}

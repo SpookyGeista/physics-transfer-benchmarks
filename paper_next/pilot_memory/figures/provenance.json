@@ -1,0 +1,14 @@
+{
+  "sources_sha256": {
+    "/home/loya2/physics-transfer/paper_next/pilot_memory/results/summary.csv": "0b847fa376dcfda0f45e2bdaba0fcfd1380e0005ad3cb0b5d60cf9a84ae6c50a",
+    "/home/loya2/physics-transfer/paper_next/pilot_memory/results/physical_contraction.csv": "e71e8f324b217b5468ad95c2f7b92a24bdd0333f7433a670afd4ece6e5a3b623",
+    "/home/loya2/physics-transfer/paper_next/pilot_memory/plot_results.py": "a17b871ee6dab90dd11ce42b59b51bb3ce041d4119901cfdb9d98899de75f43c"
+  },
+  "outputs_sha256": {
+    "memory_mechanism_slip.png": "7e0d8b2aba84af3fdae2890033cdbea59f89ae14bb15d38a2b2c3492d7bdb4a9",
+    "memory_mechanism_rest.pdf": "275ae489528b8e85925efad97165a46ea99b720de15f462e5052c3fe2871ece0",
+    "memory_mechanism_slip.pdf": "dce57b575410fe8e735c9161874d665bd066079637b3c8d8bbfd5d023cb5e32c",
+    "memory_mechanism_rest.png": "7c3872f03af733d1e96b555a1f0d7653a124e9cc2aa535e32b1b373a3823142c"
+  },
+  "role": "post-run visualization with common axes only; no result or inferential rule changed"
+}

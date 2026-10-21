@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-09-11T13:59:15.191521+00:00",
+  "parent_lock_sha256": "bf7b53f12be9ed7d668f73796f2e805b7f8b81ad42b14611e15d22865a6b22de",
+  "files": {
+    "/home/loya2/physics-transfer/study_v2/reports/numerical_amendment_review.md": "711fd275875f7c195aed638687fcdd42c267a2d5123fd1bcd858860186e2e083",
+    "/home/loya2/physics-transfer/study_v2/supplement_exact/config.json": "73452bdb85a3e7befe503ac81a5b17e7857996b506452c921a93c6590ef64e11",
+    "/home/loya2/physics-transfer/study_v2/supplement_exact/protocol.md": "1311446925cef786793ce3eb05ef6890e19213292a745b0138663b54f1873174",
+    "/home/loya2/physics-transfer/study_v2/supplement_exact/scripts/analyze.py": "d9c2742cdf1d632f093a1c44ff985248abbd09fdc89151464ca85cd7e3de1ec8",
+    "/home/loya2/physics-transfer/study_v2/supplement_exact/scripts/audit.py": "74db398e92c1d4efc01c913c0c436b5dc007e401fb88a593c1c05dc3ba4e6b45",
+    "/home/loya2/physics-transfer/study_v2/supplement_exact/scripts/evaluate.py": "2a1327e05dc755535765b7ccbf7dd6fea366d40039a7323d112ed908a804f0d8",
+    "/home/loya2/physics-transfer/study_v2/supplement_exact/scripts/freeze.py": "735621f95edf6d895e2cadd41ba081ff358b8e4a2258c91a9d5e7bc18004c1ee",
+    "/home/loya2/physics-transfer/study_v2/supplement_exact/scripts/generate.py": "6fb4f6a4a82f4ea6656344df8b6523c0cf535b62d5f18caed3f53b1db9cc2959"
+  },
+  "original_model_controller_metrics_inspected": false,
+  "trigger": "two isolated/replay normal-force discrepancies .000113N > .000100N; no performance-based model or arrangement selection",
+  "one_supplement_only": true
+}

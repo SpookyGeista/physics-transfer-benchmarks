@@ -1,0 +1,71 @@
+{
+  "exploratory": true,
+  "worlds": [
+    "maxwell",
+    "boucwen"
+  ],
+  "dataset_replicate": 0,
+  "model_seed": 0,
+  "variants": [
+    {
+      "name": "base3_longopt",
+      "feature": "base3",
+      "width": 24
+    },
+    {
+      "name": "bank9",
+      "feature": "bank9",
+      "width": 24
+    },
+    {
+      "name": "bank9_path",
+      "feature": "bank9_path",
+      "width": 24
+    },
+    {
+      "name": "bank9_path_wide",
+      "feature": "bank9_path",
+      "width": 64
+    }
+  ],
+  "history_taus_old": [
+    0.02,
+    0.08,
+    0.3
+  ],
+  "history_taus_dense": [
+    0.005,
+    0.01,
+    0.02,
+    0.04,
+    0.08,
+    0.16,
+    0.32,
+    0.64,
+    1.28
+  ],
+  "updates": 12000,
+  "optimizer": "Adam lr .002 first6000 updates, .0005 remaining6000; wd1e-6; clip5; batch512 per head",
+  "selection": "minimum isolated val scaled loss every200 updates plus1200 and12000; no fresh-test claim",
+  "ridge": "complete normal monomials degree<=3; friction degree<=2 plus absolute inputs; train-only scaling",
+  "ridge_lambdas": [
+    1e-08,
+    1e-06,
+    0.0001,
+    0.01,
+    1.0
+  ],
+  "parameter_information": "public measured paths only; current/past N excluded from normal head",
+  "no_new_test_generated": true,
+  "source_sha256": {
+    "/home/loya2/physics-transfer/study_v2/results/data/maxwell/r0/train.npz": "68b50a0fb25d63cada635a08c0971c73199ae5ba0522cdb48cf210ac88a93204",
+    "/home/loya2/physics-transfer/study_v2/results/data/maxwell/r0/train.json": "d2b3da57674b8098340ab37645cf17acf5382a5eea9b2559e1061efc669b0f74",
+    "/home/loya2/physics-transfer/study_v2/results/data/maxwell/r0/val.npz": "5aeecad3ed6036f3969baa2e5fe61688cd13ca0d43131b397f0da37e80837178",
+    "/home/loya2/physics-transfer/study_v2/results/data/maxwell/r0/val.json": "6014de509e276110162d9d9a2da711f578f40225db41b95141add720c16aea2a",
+    "/home/loya2/physics-transfer/study_v2/results/data/boucwen/r0/train.npz": "f7b0aba5dc2470f31265acffb4f16cd687947ce7a81c2ff7439bcebf6fd17cb6",
+    "/home/loya2/physics-transfer/study_v2/results/data/boucwen/r0/train.json": "1944bfe2f6755a2f847ec353a3c10ac446dc8263fa52808e43a9c5f43e3f0702",
+    "/home/loya2/physics-transfer/study_v2/results/data/boucwen/r0/val.npz": "2353e754e9de8a2992d558abe593cc57b1feffb2c0501707a4bbd134e6500c85",
+    "/home/loya2/physics-transfer/study_v2/results/data/boucwen/r0/val.json": "d61f81dcd59a76229873fdc796159f89c99ef670d871c659a9e093ad078f8077"
+  },
+  "script_sha256": "10186654d54c590579360908b80e4dfe6fdecb18565b609af67d74fbd264054c"
+}

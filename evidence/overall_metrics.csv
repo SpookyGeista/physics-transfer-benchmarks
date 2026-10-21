@@ -1,0 +1,11 @@
+sensor,method,position_rmse_mm
+clean,mle_start1,0.3587796545305396
+clean,mle_two_start,0.6397755480650463
+clean,posterior,0.48806184555786963
+clean,prior,12.026812746973517
+clean,privileged_history,0.0
+noisy,mle_start1,0.7083847065146092
+noisy,mle_two_start,0.8349788962708703
+noisy,posterior,0.5814036408922462
+noisy,prior,12.026812746973517
+noisy,privileged_history,0.0

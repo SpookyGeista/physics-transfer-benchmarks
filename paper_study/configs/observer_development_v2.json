@@ -1,0 +1,15 @@
+{
+  "role": "Exploratory fully crossed development, before forecast-loss inspection",
+  "model_seeds": [1],
+  "calibration_noise": ["clean", "noisy"],
+  "grid_size": 201,
+  "prior_bank_directory": "results/prior_development",
+  "prior": {
+    "maxwell": {"coordinate": "mix", "spacing": "linear", "bounds": [0.0, 1.0]},
+    "boucwen": {"coordinate": "age_seconds", "spacing": "log", "bounds": [0.02, 8.0]}
+  },
+  "numerical_floor": {"x_m": 0.000001, "v_m_s": 0.00001, "normal_N": 0.0001},
+  "filters": ["joint_sensor_likelihood"],
+  "forecast_starts": ["filtered_particles", "measured_start"],
+  "interpretation": "Classical finite-grid Bayes inference under fixed fitted parameters; no calibrated model-uncertainty or confirmatory claim. Population protocol prior with explicit 5-percent broad component."
+}

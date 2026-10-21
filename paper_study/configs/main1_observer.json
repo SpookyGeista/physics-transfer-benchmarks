@@ -1,0 +1,48 @@
+{
+  "role": "Held-out main1 replication of predeclared three contrasts",
+  "model_seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "calibration_noise": [
+    "noisy"
+  ],
+  "grid_size": 201,
+  "prior_bank_directory": "results/prior_main1",
+  "prior": {
+    "maxwell": {
+      "coordinate": "mix",
+      "spacing": "linear",
+      "bounds": [
+        0.0,
+        1.0
+      ]
+    },
+    "boucwen": {
+      "coordinate": "age_seconds",
+      "spacing": "log",
+      "bounds": [
+        0.02,
+        8.0
+      ]
+    }
+  },
+  "numerical_floor": {
+    "x_m": 1e-06,
+    "v_m_s": 1e-05,
+    "normal_N": 0.0001
+  },
+  "filters": [
+    "joint_sensor_likelihood"
+  ],
+  "forecast_starts": [
+    "filtered_particles"
+  ],
+  "interpretation": "Classical finite-grid Bayes inference under fixed fitted parameters. Locally prospectively locked held-out replication of three declared contrasts; no calibrated model-uncertainty claim. Population protocol prior with explicit 5-percent broad component."
+}

@@ -1,0 +1,39 @@
+{
+  "checked_unix": 1789405100.7130058,
+  "locks": [
+    {
+      "path": "results/protocol_lock.json",
+      "sha256": "62ccb1a90d4f198405363f4d88a696b117377c8800035c9b80f66aa90b95c1c0",
+      "entries": 332
+    },
+    {
+      "path": "study_v2/results/protocol_lock.json",
+      "sha256": "bf7b53f12be9ed7d668f73796f2e805b7f8b81ad42b14611e15d22865a6b22de",
+      "entries": 1226
+    },
+    {
+      "path": "study_v2/supplement_exact/lock.json",
+      "sha256": "d03aef70a0358a057790d15a180cab7111c6d39956e35200738e41bf13c63de9",
+      "entries": 8
+    },
+    {
+      "path": "research_next/results/round1/code_lock.json",
+      "sha256": "31e76990a173a3350b8d44082659c9705f3253cb21697fc4aadfdf351b1c485a",
+      "entries": 46
+    },
+    {
+      "path": "research_next/results/round1/model_lock.json",
+      "sha256": "2b3be1ce5090aa12b7334bbf8558dd23818080ebdfa3634e931453b15ed249ec",
+      "entries": 673
+    },
+    {
+      "path": "research_next/results/round1/test_lock.json",
+      "sha256": "bb84e923e1996fdef1945718f905f85100dc46ac5c5ca708a195d8528f91516d",
+      "entries": 64
+    }
+  ],
+  "failures": [],
+  "entries": 2349,
+  "unique_files": 2341,
+  "passed": true
+}

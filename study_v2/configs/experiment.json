@@ -1,0 +1,12 @@
+{
+ "version":"v2-exact-local-replay","dt":0.0025,"steps":800,"mass":2.0,"vreg":0.04,
+ "worlds":["maxwell","boucwen"],"seeds":[0,1,2,3,4],"budgets":[8,24],
+ "profiles_train":24,"profiles_val":8,"profiles_privileged":8,
+ "noise_conditions":["clean","noisy"],"noise":{"normal":0.15,"friction":0.10,"delta":0.00005,"velocity":0.002,"rate":0.001},
+ "history_taus":[0.02,0.08,0.3],"updates":1200,"batch_size":1024,"lr":0.002,
+ "methods":["nominal","identified","analytic_v1","analytic_flex","joint","moe","modular","no_history","privileged","decoupled"],
+ "cam_amplitudes":[-0.006,-0.003,0.003,0.006],"cam_length":0.04,
+ "controller":{"steps":1000,"horizon":100,"replan":20,"candidates":41,"force_limit":18.0,"target":0.06,"position_tolerance":0.008,"velocity_tolerance":0.03,"per_condition":2},
+ "source_seeds":{"train":410000,"val":510000,"privileged":610000,"control":910000},
+ "support_quantile":0.995,"coverage_required":0.99,"prediction_numerical_tol":0.0001
+}

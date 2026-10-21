@@ -1,0 +1,35 @@
+{
+  "role": "Prospectively fixed descriptive Main2 evaluation",
+  "version": "main2-evaluation-v1-2026-09-15",
+  "particles": 1024,
+  "particle_scope": "Fixed computation-budget finite empirical-history approximation; not demonstrated converged or calibrated",
+  "prior_seed": 43001,
+  "prior_duration_s": 4.0,
+  "prior_waypoint_limit_m": 0.025,
+  "prior_profile_start": 0,
+  "calibration_noise": ["noisy"],
+  "forecast_starts": ["filtered_particles"],
+  "numerical_floor": [0.000001, 0.00001, 0.0001],
+  "solver_iterations": 40,
+  "max_solver_residual_N": 0.0000001,
+  "banks": [
+    {"bank": 1, "pi_seed": 61001, "normal_seed": 1},
+    {"bank": 2, "pi_seed": 61002, "normal_seed": 2},
+    {"bank": 3, "pi_seed": 61003, "normal_seed": 3}
+  ],
+  "mle": {
+    "max_nfev": 120,
+    "max_residual_calls": 512,
+    "max_seconds_per_episode": 6.0,
+    "ftol": 0.00000001,
+    "xtol": 0.00000001,
+    "gtol": 0.00000001,
+    "numerical_floor": [0.000001, 0.00001, 0.0001],
+    "max_solver_residual_N": 0.0000001
+  },
+  "mle_starts": ["best causal P1024 initial-state particle", "fixed q=0"],
+  "mle_selection": "minimum past objective; first start wins ties",
+  "methods": ["prior_propagation", "trajectory_assimilation", "privileged_full_history", "bounded_mle_start1", "bounded_mle_two_start"],
+  "primary_loss": "pooled mean squared error and its square root; mean episode RMSE separately descriptive",
+  "max_wall_seconds_per_bank": 14400.0
+}

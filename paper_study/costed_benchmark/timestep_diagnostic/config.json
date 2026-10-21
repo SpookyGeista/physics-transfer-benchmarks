@@ -1,0 +1,20 @@
+{
+  "version": "pi-comparative-timestep-v1",
+  "divisors": [1, 2, 4],
+  "compositions": [["maxwell", "balanced"], ["boucwen", "wide_scales"], ["maxwell", "compliant"], ["boucwen", "stiff_high_capacity"]],
+  "probes": ["hold_150", "gentle_150", "strong_300"],
+  "episode_indices": [0, 7, 14, 21, 28, 35],
+  "sensor": "ideal",
+  "calibration_noise": "noisy",
+  "pi_seed": 61001,
+  "normal_seed": 1,
+  "particles": 1024,
+  "prior_seed": 43001,
+  "prior_normalized_tolerance": 1e-10,
+  "numerical_floor": [1e-6, 1e-5, 1e-4],
+  "max_solver_residual_N": 1e-7,
+  "engineering_tolerances": [0.00005, 0.002, 0.15, 0.05],
+  "mle": {"max_nfev": 120, "max_residual_calls": 512, "max_seconds_per_episode": 6.0, "ftol": 1e-8, "xtol": 1e-8, "gtol": 1e-8, "numerical_floor": [1e-6, 1e-5, 1e-4], "max_solver_residual_N": 1e-7},
+  "wall_budget_scaling": "multiply MLE per-start wall guard by timestep divisor; fixed nfev and residual-call budget",
+  "max_wall_seconds": 7200
+}

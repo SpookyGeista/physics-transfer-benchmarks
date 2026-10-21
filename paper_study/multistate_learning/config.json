@@ -1,0 +1,31 @@
+{
+  "scope": "Exploratory local three-stop identification; no global task data or architectural novelty claim",
+  "cases": ["balanced", "wide_scales", "compliant", "stiff_high_capacity"],
+  "replicate_seeds": [61001, 61002, 61003],
+  "dt": 0.0025,
+  "duration_s": 3.0,
+  "segment_s": 0.5,
+  "normal_loads_N": [10.0, 15.0, 20.0],
+  "train_per_load": 4,
+  "val_per_load": 2,
+  "train_peak_displacements_m": [0.0025, 0.008, 0.018, 0.035],
+  "conditions": {"clean": 0.0, "noisy": 0.05},
+  "profile_seed_bases": {"train": 8150100, "val": 8250100},
+  "noise_seed_base": 8350100,
+  "fit_seed_base": 8450100,
+  "fit": {
+    "multistarts": 6,
+    "max_nfev_per_start": 120,
+    "max_wall_seconds": 60.0,
+    "yield_distance_at_15N_bounds_m": [0.0001, 0.05],
+    "stiffness_bounds_N_m": [1.0, 5000.0],
+    "capacity_bounds": [0.001, 1.0],
+    "nominal_start_yield_at_15N_m": [0.001, 0.005, 0.02],
+    "random_start_yield_at_15N_m": [0.0003, 0.03],
+    "ftol": 1e-8,
+    "xtol": 1e-8,
+    "gtol": 1e-8,
+    "diff_step": 1e-4,
+    "selection": "minimum training sum of squares only; validation is not used for selection"
+  }
+}

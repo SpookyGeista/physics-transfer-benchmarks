@@ -1,0 +1,197 @@
+{
+  "status": "READY_TO_LOCK",
+  "round": 1,
+  "purpose": "Test practical reuse of locally identified persistent material states; no neural novelty or superiority claim",
+  "worlds": [
+    "maxwell",
+    "boucwen"
+  ],
+  "compositions": [
+    [
+      "maxwell",
+      "maxwell"
+    ],
+    [
+      "maxwell",
+      "boucwen"
+    ],
+    [
+      "boucwen",
+      "maxwell"
+    ],
+    [
+      "boucwen",
+      "boucwen"
+    ]
+  ],
+  "replicates": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "calibration_source_bases": {
+    "train": 8100000,
+    "val": 8200000
+  },
+  "evaluation_source_base": 8300000,
+  "profiles_per_replicate": {
+    "train": 24,
+    "val": 8,
+    "evaluation": 16
+  },
+  "noise": [
+    "clean",
+    "noisy"
+  ],
+  "noise_scope": "calibration measurements only; shared ideal feedback and observed preparation for every controller",
+  "methods": [
+    "nominal",
+    "old_flex",
+    "path_ridge",
+    "recurrent",
+    "blind_state_id",
+    "sensor_state_id",
+    "state_reset"
+  ],
+  "recurrent": {
+    "hidden": 12,
+    "updates": 6000,
+    "learning_rate": 0.002,
+    "validation_interval": 50,
+    "selection": "minimum isolated normal/20 and friction/10 squared validation error sum"
+  },
+  "identification": {
+    "restarts": 3,
+    "selection": "independent minimum isolated normal/friction validation RMSE among both known candidate families; no target-world label",
+    "max_seconds_total_both_families": 120
+  },
+  "dt": 0.0025,
+  "mass": 2.0,
+  "warmup_seconds": 4.0,
+  "motion_seconds": 1.2,
+  "controller": {
+    "horizon_steps": 100,
+    "replan_steps": 20,
+    "force_limit": 12.0,
+    "candidates": 41,
+    "target_magnitude": 0.03,
+    "switch_seconds": 0.6
+  },
+  "checkpoints_seconds": [
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0,
+    1.2
+  ],
+  "metrics": {
+    "prediction": "position RMSE across 1.2s fully open trajectory after observed 4s prefix",
+    "controller": "integral squared position error over all 1.2s including reversal; planner keeps fixed cost"
+  },
+  "primary_pairs": [
+    [
+      "prediction",
+      "blind_state_id",
+      "old_flex"
+    ],
+    [
+      "prediction",
+      "blind_state_id",
+      "path_ridge"
+    ],
+    [
+      "controller",
+      "blind_state_id",
+      "old_flex"
+    ],
+    [
+      "controller",
+      "blind_state_id",
+      "path_ridge"
+    ],
+    [
+      "controller",
+      "blind_state_id",
+      "sensor_state_id"
+    ]
+  ],
+  "statistics": {
+    "alpha_round": 0.025,
+    "allocation": "alpha_r=0.05/(r*(r+1)); Bonferroni across five two-sided paired tests",
+    "unit": "replicate mean, equal weight across all four compositions, both noise conditions and 16 profiles",
+    "n": 8,
+    "interval": "paired Student-t CI, df=7, familywise 97.5% across five contrasts",
+    "separate_cells": "descriptive; no posthoc selection of a favorable world or noise condition"
+  },
+  "guards": {
+    "normal_force_max": 10000,
+    "friction_force_max": 10000,
+    "position_max": 2,
+    "velocity_max": 20,
+    "failed_episodes": "retain all metrics and report all guard activations"
+  },
+  "reference_changes": "none; full 2x2 Cartesian assembly of the two existing immutable normal laws and two existing immutable friction laws",
+  "scope_limits": [
+    "known material-law candidate families",
+    "known preparation beginning",
+    "synthetic forces on native constrained rigid body",
+    "no hardware or real-material claim",
+    "same training distributions do not guarantee local support under new coupling",
+    "constant-action finite-horizon planner is not globally optimal"
+  ],
+  "evaluation_ranges": {
+    "preparation_duration": [
+      1,
+      1.3
+    ],
+    "preparation_amplitude": [
+      0.004,
+      0.008
+    ],
+    "cam_magnitude": [
+      0.002,
+      0.006
+    ],
+    "wave_amplitude": [
+      0.0025,
+      0.0035
+    ],
+    "wave_frequency": [
+      0.65,
+      0.95
+    ],
+    "velocity_amplitude": [
+      0.08,
+      0.16
+    ]
+  },
+  "decision": {
+    "contrast": "upper simultaneous CI < 0: advantage; lower > 0: disadvantage; otherwise inconclusive",
+    "complete_pattern": "all five contrast advantages, no numerical-validity failure, and no guard activation for primary candidate blind_state_id in its open trajectories or any of its planned candidates. Comparator guards are retained reported outcomes, not grounds for excluding them or voiding the primary candidate.",
+    "minimum_effect": "no posthoc threshold; report absolute/relative effect sizes. Statistical sign alone is not declared substantial engineering value.",
+    "partial": "retain separately supported contrasts; no claim of full success or universal superiority"
+  },
+  "numerical_validity": {
+    "native_velocity_tracking_max": 5e-07,
+    "native_step_position_residual_max": 5e-08,
+    "mujoco_vs_physx_position_rmse_max": 1e-05,
+    "mujoco_vs_physx_position_absolute_max": 0.0001,
+    "refinement_h1_h4_position_rmse_max": 0.001,
+    "refinement_median_D24_D12_max": 0.8,
+    "backend_scope": "one predeclared clean replicate r1, all 4 compositions and16 profiles; frozen predictions compared with native MuJoCo h1,h2,h4",
+    "failure": "report results and mark full technical claim inconclusive; no retuning, dropped episodes or new tolerances",
+    "aggregation": "All four r1 compositions must pass; ratios median across each composition's 16 profiles, other limits worst across profiles as appropriate. Summary records worst composition values."
+  },
+  "resources": {
+    "fit_wall_seconds_limit": 7200,
+    "native_evaluation_wall_seconds_limit": 7200,
+    "backend_wall_seconds_limit": 1800,
+    "incomplete_policy": "retain partial artifacts and explicit incompleteness; do not reduce models/seeds or alter stopping based on outcomes"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "role": "Development grid refinement: planned max change in each of three primary contrast values <=0.01, otherwise refine again before main lock",
+  "model_seeds": [
+    1
+  ],
+  "calibration_noise": [
+    "noisy"
+  ],
+  "grid_size": 401,
+  "prior_bank_directory": "results/prior_grid401",
+  "prior": {
+    "maxwell": {
+      "coordinate": "mix",
+      "spacing": "linear",
+      "bounds": [
+        0.0,
+        1.0
+      ]
+    },
+    "boucwen": {
+      "coordinate": "age_seconds",
+      "spacing": "log",
+      "bounds": [
+        0.02,
+        8.0
+      ]
+    }
+  },
+  "numerical_floor": {
+    "x_m": 1e-06,
+    "v_m_s": 1e-05,
+    "normal_N": 0.0001
+  },
+  "filters": [
+    "joint_sensor_likelihood"
+  ],
+  "forecast_starts": [
+    "filtered_particles"
+  ],
+  "interpretation": "Classical finite-grid Bayes inference under fixed fitted parameters; no calibrated model-uncertainty or confirmatory claim. Population protocol prior with explicit 5-percent broad component."
+}

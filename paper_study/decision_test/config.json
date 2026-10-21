@@ -1,0 +1,131 @@
+{
+  "role": "Held-out descriptive budget-risk decision extension; no guaranteed positive result or novelty claim",
+  "version": "decision-test-v1-2026-09-15",
+  "preparation_seeds": [
+    55201,
+    55202,
+    55203,
+    55204,
+    55205,
+    55206,
+    55207,
+    55208
+  ],
+  "compositions": [
+    [
+      "maxwell",
+      "maxwell"
+    ],
+    [
+      "maxwell",
+      "boucwen"
+    ],
+    [
+      "boucwen",
+      "maxwell"
+    ],
+    [
+      "boucwen",
+      "boucwen"
+    ]
+  ],
+  "profiles_per_seed": 6,
+  "geometry_ids": [
+    0,
+    1,
+    2
+  ],
+  "cam_amplitude_m": 0.003,
+  "excitation_signs": [
+    -1,
+    1
+  ],
+  "dt": 0.0025,
+  "mass_kg": 2.0,
+  "initial_compression_m": 0.02,
+  "observation_steps": 10,
+  "common_seconds": 0.05,
+  "continuation_seconds": 0.1,
+  "probe_period_seconds": 0.15,
+  "probe_excitation_N": 3.0,
+  "future_seconds": 0.25,
+  "future_excitation_N": 5.0,
+  "future_compression_amplitude_m": 0.002,
+  "kp": 120.0,
+  "kd": 20.0,
+  "force_limit_N": 12.0,
+  "sensor_sigma": [
+    5e-05,
+    0.002,
+    0.15
+  ],
+  "numerical_floor": [
+    1e-06,
+    1e-05,
+    0.0001
+  ],
+  "sensor_seed": 91534001,
+  "model_seed": 1,
+  "calibration_noise": "noisy",
+  "prior_bank_directory": "paper_study/results/prior_main1",
+  "particles": 201,
+  "fantasies": 1024,
+  "fantasy_seed": 91544001,
+  "policy_seed": 91544002,
+  "budgets": [
+    {
+      "name": "B0",
+      "time_scale_s": 0.1,
+      "work_scale_J": 0.01,
+      "max_scaled_time": 0.0,
+      "max_scaled_work": 0.0
+    },
+    {
+      "name": "B1",
+      "time_scale_s": 0.1,
+      "work_scale_J": 0.01,
+      "max_scaled_time": 1.0,
+      "max_scaled_work": 0.1
+    },
+    {
+      "name": "B2",
+      "time_scale_s": 0.1,
+      "work_scale_J": 0.01,
+      "max_scaled_time": 1.0,
+      "max_scaled_work": 0.5
+    },
+    {
+      "name": "B3",
+      "time_scale_s": 0.1,
+      "work_scale_J": 0.01,
+      "max_scaled_time": 1.0,
+      "max_scaled_work": 2.0
+    }
+  ],
+  "guard": {
+    "max_abs_position_m": 0.5,
+    "max_abs_velocity_m_s": 5.0,
+    "min_normal_N": 0.01
+  },
+  "native_wall_seconds": 1200.0,
+  "evaluation_wall_seconds": 1800.0,
+  "study_id": "decision_test_v1",
+  "model_seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "resolution_status": "final",
+  "resolution_evidence_sha256": {
+    "/home/loya2/physics-transfer/paper_study/results/decision_resolution_v1/resolution_lock.json": "9183610e3a2a72d4a51483a48d3ffcc703a9d0dbbce551a7c25df3cf8cd8fa09",
+    "/home/loya2/physics-transfer/paper_study/results/decision_resolution_v1/decision.json": "7110669470a0b61e32c0ca5c636cbe1dd2a787317364abe14248466b8c9823ae",
+    "/home/loya2/physics-transfer/paper_study/results/decision_resolution_report_v1/completion_audit.json": "f44e7c2560f43d83a2cdd0e089733e47c942f745bee59ee7bb7bcb08995390f4"
+  },
+  "resolution_reason": "Declared before any reserved test draw: retain P201; use K1024 to reduce finite-fantasy Monte Carlo variation. P201/K1024 versus P401/K1024 has 100 percent choice agreement and maximum pooled method/budget MSE change 0.004224 percent. All outcomes, including fixed-continue outperforming Bayes-risk in development, remain reported. This choice is computational resolution, not selection of a successful policy.",
+  "posterior_chunk_size": 32
+}

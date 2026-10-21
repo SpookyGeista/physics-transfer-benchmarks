@@ -1,0 +1,11 @@
+{
+  "name":"single-prospective-numerical-construction-confirmation",
+  "cam_amplitudes":[-0.005,-0.002,0.002,0.005],
+  "worlds":["maxwell","boucwen"],"seeds":[0,1,2,3,4],"budgets":[24],
+  "noise_conditions":["clean","noisy"],"steps":800,
+  "all_local_profiles":24,"additional_model_training":false,
+  "repeated_amendments_allowed":false,
+  "original_failure_retained":true,
+  "change":"Oracle command construction uses actual reference x,v to hold local compression/rate exactly; all resulting commands frozen for every model.",
+  "decision_rules":"Reuse original frozen statistical, numerical, support and task criteria without changes. Original controller line remains a separate unchanged task family."
+}
